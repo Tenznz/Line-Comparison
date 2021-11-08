@@ -13,7 +13,9 @@ public class CartesianSystem {
 		y1 = sc.nextInt();
 		x2 = sc.nextInt();
 		y2 = sc.nextInt();
-		return ((double) Math.round(Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1)) * 100)) / 100;
+		double line=((double) Math.round(Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1)) * 100)) / 100;
+		System.out.println("Distance between" + "(" + x1 + "," + y1 + ")," + "(" + x2 + "," + y2 + ") = " + line);
+		return line; 
 	}
 
 	private static String compareTo(double line1, double line2) {
@@ -32,9 +34,7 @@ public class CartesianSystem {
 		double line1, line2;
 		CartesianSystem line = new CartesianSystem();
 		line1 = line.Line();
-		System.out.println("Distance between" + "(" + x1 + "," + y1 + ")," + "(" + x2 + "," + y2 + ") = " + line1);
 		line2 = line.Line();
-		System.out.println("Distance between" + "(" + x1 + "," + y1 + ")," + "(" + x2 + "," + y2 + ") = " + line2);
 		String result = compareTo(line1, line2);
 		System.out.println(result);
 	}
